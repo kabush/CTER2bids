@@ -1,0 +1,10 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+.\#*
+
+*.pyc
+
+tmp
+
+proj.mat

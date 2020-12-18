@@ -1,0 +1,80 @@
+# ========================================
+# ========================================
+# Keith Bush, PhD (2020)
+# Univ. of Arkansas for Medical Sciences
+# Brain Imaging Research Center (BIRC)
+# ========================================
+# ========================================
+
+# ----------------------------------------
+# ----------------------------------------
+    OTHER CONTRIBUTORS:
+# ----------------------------------------
+# ----------------------------------------
+
+Ivan Messias (2019)
+     BIDS specification testing and validation
+
+Kevin Fialkowski (2019)
+     BIDS specification testing and validation
+
+# ----------------------------------------
+# ----------------------------------------
+    OVERVIEW: 
+# ----------------------------------------
+# ----------------------------------------
+
+The dataset represents the raw data supporting the Brain and
+Behavioral Research Foundation NARSAD Young Investigator Award
+(#26079), titled "A Causal Test of Emotion Regulation in the Affective
+Perception of Visual Stimuli
+
+TBD
+
+# ----------------------------------------
+# ----------------------------------------
+    NOTES:
+# ----------------------------------------
+# ----------------------------------------
+
+# BOLD SIGNAL
+#
+# The bold signal was acquired using the Philips Achieva seq+z slice timing
+# with 37 slices. Based on TR=2.0 s, this sequence creates an inter-slice
+# interval of 0.0541 s.  The following array has been copied into the SliceTime 
+# arrays of the template json files.
+#
+# "SliceTiming": [0.0000,0.0541,0.1082,0.1623,0.2164,0.2705,0.3246,
+#                 0.3787,0.4328,0.4869,0.5410,0.5951,0.6492,0.7033,
+#		  0.7574,0.8115,0.8656,0.9197,0.9738,1.0279,1.0820,
+#		  1.1361,1.1902,1.2443,1.2984,1.3525,1.4066,1.4607,
+#		  1.5148,1.5689,1.6230,1.6771,1.7312,1.7853,1.8394,
+#		  1.8935,1.9476]
+
+# EVENTS
+#
+# Modulate events special cases ***NOT*** handled by mapping code.  These
+#      events should be removed (via hand editting if necessary) as the
+#      true onset of the stimulus cannot be determined post-hoc.
+#
+#      Modulate Run 1 (mis-logged feedback)
+#      CTER 010:  fb_img_id=8170 
+#          ***fb-driven stimulus not logged. All fb time >= 560.01 
+#             should be removed.  Also should remove fb_init @ 558.0720.
+#             Subject would see a fixation cross throughout.
+#                                     
+#      CTER 021: fb_img_id=9570
+#          *** fb-driven stimulus not logged. All fb time= 282.104 to
+#              318.022 should be removed.  Also should removed fb_init @
+#              279.967.
+#
+#      CTER 040: fb_img_id=9830.  
+#          ***fb-driven stimulus not logged. All fb time= 508.0077 to 544.0630
+#             should be removed. Also shold remove fb_init @ 506.0660.
+#
+#      CTER 050: fb_img_id=8170  
+#          ***fb-driven stimulus not logged. All fb time = 588.178 to 595.942
+#             should be removed. Also shold remove fb_init @ 558.074.
+#
+#      Modulate Run 2 (miss-logged feedback)
+#      (n/a)

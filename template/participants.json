@@ -1,0 +1,19 @@
+{
+	"age": {
+		"Description":"age of participant",
+		"Units": "years"
+	},
+	"sex": {
+		"Description":"sex of the participant",
+			"Levels": {
+				"M":"male",
+				"F":"female"
+			}
+		},
+	"group": {
+		"Description":"condition of the subject",
+			"Levels": {
+				"control":"healthy subject"
+			}
+		}
+}

@@ -1,0 +1,11 @@
+{
+    "onset": "true onset time of the event",
+    "duration": "true duration time of the event (approximated)",
+    "trial_type": "event type",
+    "dsgn_onset": "The designed onset time of the event",
+    "dsgn_duration": "The designed duration time of the event",
+    "database": "International Affective Picture System",
+    "identifier": "Image ID from database",
+    "valence": "Normative rating of valence",
+    "arousal": "Normative rating of arousal"
+}

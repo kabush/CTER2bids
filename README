@@ -1,0 +1,104 @@
+# ========================================
+# ========================================
+# Keith Bush, PhD (2019)
+# Univ. of Arkansas for Medical Sciences
+# Brain Imaging Research Center (BIRC)
+# ========================================
+# ========================================
+
+# ----------------------------------------
+# ----------------------------------------
+    OTHER CONTRIBUTORS:
+# ----------------------------------------
+# ----------------------------------------
+
+Ivan Messias (2019)
+     Initial testing of BIDS standard/validator
+     Initial conversion of design to events.
+
+Kevin Fialkowski (2019)
+     Initial evaluation of BIDS standard
+
+
+# ----------------------------------------
+# ----------------------------------------
+    OVERVIEW: 
+# ----------------------------------------
+# ----------------------------------------
+
+This project maps raw data files to BIDS format for the "Causal Test 
+of Emotion Regulation in the Affective Perception of Image Stimuli 
+(CTER)" study funded by the Brain and Behavioral Research Foundation 
+NARSAD Young Investigator Award #26079 sponsored by the Families for 
+Borderline Personality Disorder Research. 
+
+# ----------------------------------------
+# ----------------------------------------
+    DATA SOURCES:
+# ----------------------------------------
+# ----------------------------------------
+
+Raw data not released.  See BIDS formatted data.
+
+# ----------------------------------------
+# ----------------------------------------
+    PROJECT OVERVIEW:
+# ----------------------------------------
+# ----------------------------------------
+
+/CTER2bids
+    run_project.m  # the master script which sequentially
+    		   # calls all supporting scripts.  If the
+	      	   # project executes correctly then the 
+	      	   # log directory will contain a textual
+	      	   # description of all important setps
+		   # recorded by script execution.
+
+    matlab_reset.m # clears the workspace and resets matlab's
+                   # path to the initial launch state
+
+    /log
+        # where statistical findings are stored
+
+    /source
+        init_project.m  # all project parameters
+
+    	clean_project.m # wipes the directory storing
+    			# intermediate files
+        /study_maps
+	    # scripts to map study level BIDS data and 
+            # json sidecar files
+
+        /subj_maps
+	    # scripts to map individual subject level
+            # data (BOLD, physio, events) and 
+            # json sidecare files
+
+    /subj_lists
+        # stores text files listing the included
+	# subjects for each study being used in
+	# this project analysis
+
+    /task_design
+        # contains original design files used
+        # to select stimuli and trial sequences
+
+    /template
+        # contains default *.json templates
+        # copied to conform to the BIDS standard
+
+# ----------------------------------------
+# ----------------------------------------
+    REQUIRED TOOLS
+# ----------------------------------------
+# ----------------------------------------
+
+matlab (Tested only for R2016B)
+    - statistical analysis toolbox
+    - parallel computing toolbox
+
+pydeface
+    - https://github.com/poldracklab/pydeface
+
+gzip
+      

@@ -1,0 +1,14 @@
+{
+    "onset": "true onset time of the event",
+    "duration": "true duration time of the event (approximated)",
+    "trial_type": "event type",
+    "dsgn_onset": "The designed onset time of the event",
+    "dsgn_duration": "The designed duration time of the event",
+    "database": "International Affective Picture System",
+    "identifier": "Image ID from database",
+    "valence": "Normative rating of valence, range [1,9]",
+    "arousal": "Normative rating of arousal, range [1,9]",
+    "feedback": "transparency of 'FEEL', range [0,1], 0=100% transparent, 1=100% opaque, based on rt-predicted valence",
+    "avg_feedback": "three volume moving avg. of rt-predicted valence scaled to [-1,1]",
+    "threshold": "avg_feedback value needed to trigger stimulus, range [0,0.8]"
+}

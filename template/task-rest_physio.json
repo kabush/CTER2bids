@@ -1,0 +1,6 @@
+{
+	"SamplingFrequency": 2000.0,
+   "StartTime": 0.0,
+   "Columns": ["cardiac","respiratory","scr","emg_zygo","emg_corr"],
+	"TaskName": "rest"
+}
