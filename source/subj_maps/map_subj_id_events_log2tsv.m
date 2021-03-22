@@ -55,7 +55,7 @@ for i=1:numel(subjs)
            '_log_list.txt > ',tmp_path,'identify_1_logfile.txt'];
     disp(cmd);
     eval(cmd);
-    
+
     fid = fopen([tmp_path,'identify_1_logfile.txt'],'r');
     filename = fscanf(fid,'%s');
     fclose(fid);
